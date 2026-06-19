@@ -65,9 +65,9 @@ namespace Dsw2026Ej15.Data
             return Task.FromResult(activeDoctors);
         }
 
-        public Task<Doctor?> GetDoctorByIdAsync(string id)
+        public Task<Doctor?> GetDoctorByIdAsync(Guid id)
         {
-            var doctor = _doctors.FirstOrDefault(d => d.LicenseNumber == id);
+            var doctor = _doctors.FirstOrDefault(d => d.Id == id);
             return Task.FromResult(doctor);
         }
 

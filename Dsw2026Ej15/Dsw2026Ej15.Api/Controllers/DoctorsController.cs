@@ -57,6 +57,40 @@ namespace Dsw2026Ej15.Api.Controllers
             return Ok(response);
         }
 
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var doctor = await _persistence.GetDoctorByIdAsync(id);
 
+            if (doctor == null || !doctor.IsActive)
+            {
+                return NotFound();
+            }
+
+            var response = new DoctorModel.Response(
+                doctor.Name,
+                doctor.LicenseNumber,
+                doctor.Speciality?.Name ?? string.Empty
+            );
+
+            return Ok(response);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var doctor = await _persistence.GetDoctorByIdAsync(id);
+
+            if (doctor == null || !doctor.IsActive)
+            {
+                return NotFound();
+            }
+
+            doctor.IsActive = false;
+
+            await _persistence.UpdateDoctorAsync(doctor);
+
+            return NoContent();
+        }
     }
 }
