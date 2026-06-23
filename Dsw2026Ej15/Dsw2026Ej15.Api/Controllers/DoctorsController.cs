@@ -71,7 +71,7 @@ namespace Dsw2026Ej15.Api.Controllers
                 doctor.Name,
                 doctor.LicenseNumber,
                 doctor.Speciality?.Name ?? string.Empty
-            );
+            );  
 
             return Ok(response);
         }
