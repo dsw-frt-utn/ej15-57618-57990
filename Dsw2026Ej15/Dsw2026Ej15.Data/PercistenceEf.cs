@@ -7,7 +7,7 @@ using System.Text;
 
 namespace Dsw2026Ej15.Data
 {
-    internal class PercistenceEf : IPersistence
+    public class PercistenceEf : IPersistence
     {
         private readonly Dsw2026Ej15DbContext _context;
 
@@ -23,7 +23,7 @@ namespace Dsw2026Ej15.Data
 
         public async Task<IEnumerable<Doctor>> GetActiveDoctorsAsync()
         {
-            return _context.Doctors.Where(d => d.IsActive);
+            return  _context.Doctors.Where(d => d.IsActive);
         }
 
         public async Task<Doctor?> GetDoctorByIdAsync(Guid id)
@@ -31,14 +31,16 @@ namespace Dsw2026Ej15.Data
             return await _context.Doctors.FirstOrDefaultAsync(d => d.Id == id && d.IsActive);
         }
 
-        public Task<Speciality?> GetSpecialityByIdAsync(Guid id)
+        public async Task<Speciality?> GetSpecialityByIdAsync(Guid id)
         {
-            throw new NotImplementedException();
+            return await _context.Specialities.FirstOrDefaultAsync(s => s.Id == id);
         }
 
-        public Task UpdateDoctorAsync(Doctor doctor)
+        public async Task UpdateDoctorAsync(Doctor doctor)
         {
-            throw new NotImplementedException();
+            _context.Update(doctor);
+            await _context.SaveChangesAsync();
+            
         }
     }
 }

@@ -18,7 +18,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddHealthChecks();
 
-builder.Services.AddSingleton<IPersistence, PersistenceInMemory>();
+builder.Services.AddScoped<IPersistence, PercistenceEf>();
 
 var app = builder.Build();
 
