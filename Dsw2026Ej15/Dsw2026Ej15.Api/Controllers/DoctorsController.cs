@@ -86,7 +86,7 @@ namespace Dsw2026Ej15.Api.Controllers
                 return NotFound();
             }
 
-            doctor.IsActive = false;
+            doctor.Deactivate();
 
             await _persistence.UpdateDoctorAsync(doctor);
 
