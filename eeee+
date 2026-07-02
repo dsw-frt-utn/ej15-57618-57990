@@ -1,0 +1,53 @@
+[33mcommit bf82b9b5594980edd82cc42a038623e33c2fed11[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mfeature/persistencia-db-57990[m[33m, [m[1;31morigin/feature/persistencia-db-57990[m[33m)[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Fri Jun 26 11:33:49 2026 -0300
+
+    se asigno PercistenceEf
+
+[33mcommit c09b38a78b22b19b54c9633507a359ea1488f881[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Wed Jun 24 15:11:32 2026 -0300
+
+    se completaron los metodos de acceso
+
+[33mcommit 522ae50537c1f0ff68bc822b891b69c6e31c7cca[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Wed Jun 24 13:50:29 2026 -0300
+
+    se configuro las propiedades del DbContext
+
+[33mcommit 427592598c8d5c85aebe71ba02821875f028b128[m[33m ([m[1;32mdevelopment[m[33m)[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Tue Jun 23 12:46:59 2026 -0300
+
+    cambios menores
+
+[33mcommit f036830b89195f4536ddd19b1c07a2e9f12e19bd[m[33m ([m[1;31morigin/development[m[33m)[m
+Author: Ivan Diaz <ivandiaz.arg.dev@gmail.com>
+Date:   Fri Jun 19 19:18:43 2026 -0300
+
+    Agrego endpoints GET y DELETE de doctores
+
+[33mcommit ecb9e13b274e5384c1514ca2df83c6016b7a9e55[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Fri Jun 19 16:05:24 2026 -0300
+
+    se completaron las capas y se asignaron los endpoints iniciales
+
+[33mcommit 342ef98e5dad9d8d7adc9a04dd4cad06a5185b2e[m
+Author: LucasSangino <lucas.sangino@alu.frt.utn.edu.ar>
+Date:   Fri Jun 19 13:39:41 2026 -0300
+
+    error de compilacion arreglado
+
+[33mcommit 0c6627d7451a7132a49d8e93d6330f20246961cd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Thu Jun 18 01:51:08 2026 +0000
+
+    add deadline
+
+[33mcommit 6ef49e06278e9b7bc5de1ea4a61217bf133ecb12[m
+Author: github-classroom[bot] <66690702+github-classroom[bot]@users.noreply.github.com>
+Date:   Fri Jun 12 17:28:44 2026 +0000
+
+    Initial commit

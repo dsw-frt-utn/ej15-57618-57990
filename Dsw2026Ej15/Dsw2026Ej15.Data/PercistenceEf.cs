@@ -23,12 +23,14 @@ namespace Dsw2026Ej15.Data
 
         public async Task<IEnumerable<Doctor>> GetActiveDoctorsAsync()
         {
-            return  _context.Doctors.Where(d => d.IsActive);
+            return  _context.Doctors
+                .Include("Speciality")
+                .Where(d => d.IsActive);
         }
 
         public async Task<Doctor?> GetDoctorByIdAsync(Guid id)
         {
-            return await _context.Doctors.FirstOrDefaultAsync(d => d.Id == id && d.IsActive);
+            return await _context.Doctors.SingleOrDefaultAsync(d => d.Id == id && d.IsActive);
         }
 
         public async Task<Speciality?> GetSpecialityByIdAsync(Guid id)
